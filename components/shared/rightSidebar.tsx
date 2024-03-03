@@ -5,50 +5,50 @@ import RenderTag from "./renderTag";
 
 const hotQuestions = [
   {
-    _id: 1,
+    _id: "1",
     title: "How do I use express as a custom server in NextJS?",
   },
   {
-    _id: 2,
+    _id: "2",
     title: "Cascading deletes in SQLAlchemy?",
   },
   {
-    _id: 3,
+    _id: "3",
     title: "How to perfectly center a div with tailwind css",
   },
   {
-    _id: 4,
+    _id: "4",
     title: "Best practices for data fetching in a nextJS application?",
   },
   {
-    _id: 5,
+    _id: "5",
     title: "Redux Toolkit not updating states as expected",
   },
 ];
 
 const popularTags = [
   {
-    _id: 1,
+    _id: "1",
     name: "Javascript",
     totalQuestions: 5,
   },
   {
-    _id: 2,
+    _id: "2",
     name: "react",
     totalQuestions: 5,
   },
   {
-    _id: 3,
+    _id: "3",
     name: "next",
     totalQuestions: 5,
   },
   {
-    _id: 4,
+    _id: "4",
     name: "vue",
     totalQuestions: 2,
   },
   {
-    _id: 5,
+    _id: "5",
     name: "redux",
     totalQuestions: 10,
   },
