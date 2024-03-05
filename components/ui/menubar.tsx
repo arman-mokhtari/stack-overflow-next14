@@ -1,3 +1,4 @@
+/* eslint-disable tailwindcss/enforces-shorthand */
 "use client"
 
 import * as React from "react"
