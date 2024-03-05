@@ -55,7 +55,6 @@ export async function createQuestion(params: CreateQuestionParams) {
     });
 
     revalidatePath(path);
-    console.log("path: ", path);
   } catch (error) {
     console.error(error);
   }
