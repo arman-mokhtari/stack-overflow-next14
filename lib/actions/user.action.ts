@@ -72,7 +72,7 @@ export async function deleteUser(params: DeleteUserParams) {
 
     return deletedUser;
   } catch (error) {
-    console.log(error);
+    console.error(error);
     throw error;
   }
 }
