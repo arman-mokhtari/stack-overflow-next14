@@ -1,6 +1,7 @@
 import LeftSidebar from "@/components/shared/leftSidebar";
 import Navbar from "@/components/shared/navbar/navbar";
 import RightSidebar from "@/components/shared/rightSidebar";
+import { Toaster } from "@/components/ui/toaster";
 import { ReactNode } from "react";
 
 const Layout = ({ children }: { children: ReactNode }) => {
@@ -14,6 +15,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
         </section>
         <RightSidebar />
       </div>
+      <Toaster />
     </main>
   );
 };
