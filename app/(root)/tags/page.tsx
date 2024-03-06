@@ -2,12 +2,13 @@ import LocalSearchbar from "@/components/shared/search/localSearch";
 import Filter from "@/components/shared/filters";
 
 import TagCard from "@/components/cards/tagCard";
-import { GetAllTags } from "@/lib/actions/tag.action";
+
 import NoResult from "@/components/shared/noResult";
 import { TagFilters } from "@/constants/filters";
+import { getAllTags } from "@/lib/actions/tag.action";
 
 const Page = async () => {
-  const result = await GetAllTags({});
+  const result = await getAllTags({});
   return (
     <>
       <div className="flex w-full flex-col-reverse justify-between gap-4 sm:flex-row sm:items-center">
