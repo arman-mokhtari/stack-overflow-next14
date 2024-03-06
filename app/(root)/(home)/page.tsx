@@ -1,8 +1,8 @@
 import QuestionCard from "@/components/cards/questionCard";
 import HomeFilters from "@/components/home/homeFilters";
-import Filter from "@/components/shared/filter";
+import Filter from "@/components/shared/filters";
 import NoResult from "@/components/shared/noResult";
-import LocalSearch from "@/components/shared/search/localSearchBar";
+import LocalSearch from "@/components/shared/search/localSearch";
 import { Button } from "@/components/ui/button";
 import { HomePageFilters } from "@/constants/filters";
 import { getQuestions } from "@/lib/actions/question.action";
