@@ -2,7 +2,6 @@ import { getUserQuestions } from "@/lib/actions/user.action";
 import { SearchParamsProps } from "@/types";
 import QuestionCard from "../cards/questionCard";
 
-
 interface Props extends SearchParamsProps {
   userId: string;
   clerkId?: string | null;
@@ -30,7 +29,6 @@ const QuestionTab = async ({ searchParams, userId, clerkId }: Props) => {
           createdAt={question.createdAt}
         />
       ))}
-      
     </>
   );
 };
