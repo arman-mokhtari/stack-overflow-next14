@@ -3,7 +3,7 @@ import Link from "next/link";
 const TagCard = ({ tag }: any) => {
   return (
     <Link
-      href={`/tag/${tag._id}`}
+      href={`/tags/${tag._id}`}
       className="shadow-light100_darknone w-full max-xs:min-w-full sm:w-[260px]"
     >
       <article className="background-light900_dark200 light-border flex w-full flex-col items-start justify-center rounded-2xl border p-8">

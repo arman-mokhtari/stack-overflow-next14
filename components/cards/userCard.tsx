@@ -1,37 +1,21 @@
-"use client";
-import { useEffect, useState } from "react";
-import { getTopInteracttedTags } from "@/lib/actions/tag.action";
 import Image from "next/image";
 import Link from "next/link";
 import { Badge } from "../ui/badge";
-import RenderTags from "../shared/RenderTags";
+import RenderTag from "../shared/renderTag";
+import { getTopInteractedTags } from "@/lib/actions/tag.action";
 
 interface Props {
   user: {
     _id: string;
     clerkId: string;
-    picture: string;
     name: string;
+    picture: string;
     username: string;
   };
 }
 
-const UserCard = ({ user }: Props) => {
-  const [interactedTags, setInteractedTags] = useState([
-    {
-      _id: "",
-      name: "",
-    },
-  ]);
-
-  useEffect(() => {
-    const fetchTags = async () => {
-      const tags = await getTopInteracttedTags({ userId: user._id });
-      setInteractedTags(tags);
-    };
-
-    fetchTags();
-  }, [user._id]);
+const UserCard = async ({ user }: Props) => {
+  const interactedTags = await getTopInteractedTags({ userId: user._id });
 
   return (
     <Link
@@ -46,28 +30,29 @@ const UserCard = ({ user }: Props) => {
           height={100}
           className="rounded-full"
         />
+
         <div className="mt-4 text-center">
           <h3 className="h3-bold text-dark200_light900 line-clamp-1">
             {user.name}
           </h3>
-          <p className="text-dark500_light500 body-regular mt-2">
+          <p className="body-regular text-dark500_light500 mt-2">
             @{user.username}
           </p>
         </div>
+
         <div className="mt-5">
           {interactedTags.length > 0 ? (
             <div className="flex items-center gap-2">
               {interactedTags.map((tag) => (
-                <RenderTags key={tag._id} _id={tag._id} name={tag.name} />
+                <RenderTag key={tag._id} _id={tag._id} name={tag.name} />
               ))}
             </div>
           ) : (
-            <Badge>No tags yet</Badge>
+            <Badge>No tags to show</Badge>
           )}
         </div>
       </article>
     </Link>
   );
 };
-
 export default UserCard;
